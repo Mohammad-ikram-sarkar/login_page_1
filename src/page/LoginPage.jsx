@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Database, Eye, EyeOff } from "lucide-react";
-import location from "../assets/images.jpeg";
+import location from "../assets/global.jpg";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -8,16 +8,16 @@ export default function LoginPage() {
   const [restrictIP, setRestrictIP] = useState("No");
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#eaeafe] relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-[#eaeafe] relative overflow-hidden px-4">
       <div className="absolute inset-0 z-0">
         <img
           src={location}
           alt="Background"
-          className="w-full h-[50%] object-cover opacity-70 scale-110"
+          className="w-full h-[50%] object-cover  scale-110"
         />
       </div>
 
-      <div className="z-10 w-full max-w-md rounded-2xl shadow-xl bg-white p-8">
+      <div className="z-10 w-full max-w-md rounded-2xl shadow-xl bg-white p-6 sm:p-8">
         <div className="text-center mb-6">
           <h1 className="text-2xl font-semibold text-[#2a2a2a] flex items-center justify-center gap-2">
             <Database className="text-[#f97316]" size={28} />
@@ -41,7 +41,7 @@ export default function LoginPage() {
               className="w-full border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none px-3 py-2 pr-10 rounded-md"
             />
             <div
-              className="absolute inset-y-0 right-2 flex items-center cursor-pointer mb-[20px]"
+              className="absolute inset-y-0 right-2 flex items-center cursor-pointer mb-[23px]"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
